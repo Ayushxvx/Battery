@@ -65,6 +65,25 @@
                 document.getElementById("btn").innerHTML = "Start Charging";
             document.getElementById("charge").style.display = "none";
             }
+                const updateText = () => {
+                let height = chargeDiv.style.height;
+                if (height.includes('%')) {
+                    height = parseInt(height);
+                    if (height < 20) {
+                        chargeText.textContent = 'Charging...';
+                    } else if (height < 40) {
+                       
+                    } else if (height < 60) {
+                       
+                    } else if (height < 80) {
+                       
+                    } else if (height < 100) {
+                        
+                    } else {
+                        chargeText.textContent = 'Charged!';
+                    }
+                }
+            };
         }
         </script>
     </body>

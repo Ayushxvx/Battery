@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="keywords" content="paul anka battery,1950 html battery,put your battery on my charger">
+        <meta name="author" content="Ayush Verma">
+        <style>
+            #charge{
+                display:none;
+                animation:ani 5s linear infinite;
+                transition:all ease 1s;
+            }
+            @keyframes ani{
+                0%{
+                    height:0%;
+                    background-color:red;
+                }
+                20%{
+                    height:20%;
+                    background-color:orange;
+                }
+                40%{
+                    height:40%;
+                    background-color:yellow;
+                }
+                60%{
+                    height:60%;
+                    background-color:#bafc03;
+                }
+                80%{
+                    height:80%;
+                    background-color:lightgreen;
+                }
+                100%{
+                    height:100%;
+                    background-color:limegreen;
+                }
+            }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-black"><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="border-2 border-white border-solid w-1/12 mx-auto rounded-xl">
+            <br>
+        </div>
+        <div class="w-5/12 sm:w-4/12 md:3/12 lg:w-2/12 border-2 border-solid border-white rounded-xl mx-auto h-48">
+            <div id="charge"></div>
+        </div>
+        <br><br><br>
+        <button onclick="charge()" id="btn" class="bg-gradient-to-r rounded-xl block mx-auto from-purple-500 to-blue-500 text-white hover:opacity-70 p-4 m-2 border-2 border-solid border-white">
+            Start Charging
+        </button>
+        <script>
+            let count = 0;
+            function charge(){
+                count+=1;
+                if(count%2==1){
+                    document.getElementById("btn").innerHTML = "Stop Charging"
+                    document.getElementById("charge").style.display = "block";
+            }
+            else{
+                document.getElementById("btn").innerHTML = "Start Charging";
+            document.getElementById("charge").style.display = "none";
+            }
+        }
+        </script>
+    </body>
+</html>
